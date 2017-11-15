@@ -11,7 +11,7 @@ import android.widget.Toast;
  */
 
 public class databasehelper1 extends SQLiteOpenHelper {
-    private static final String TAG="db";
+
     private static final String TABLE_NAME="db1";
     private static final String col1="PostId";
     private static final String col2="id";
@@ -32,7 +32,7 @@ public class databasehelper1 extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(sqLiteDatabase);
 
 
@@ -47,13 +47,6 @@ sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         contentValues.put(col4,email);
         contentValues.put(col5,body);
         long result=db.insert(TABLE_NAME,null,contentValues);
-        if(result==-1)
-        {
-            System.out.println("no");
-        }
-        else
-        {
-            System.out.println("inserted "  );
-        }
+
     }
 }

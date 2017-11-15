@@ -506,7 +506,8 @@ android:textSize="13dp"
             <Button
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:text="Current Unix Timestamp"
+
+                android:id="@+id/btn"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>

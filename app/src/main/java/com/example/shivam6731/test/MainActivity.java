@@ -1,6 +1,7 @@
 package com.example.shivam6731.test;
 
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,11 +35,12 @@ public class MainActivity extends AppCompatActivity {
     TextView a1,a2,a3,a4,b1,b2,b3,b4,c1,c2,c3,c4,d1,d2,d3,d4;
     String q1,q2,w1,w2,e1,e2,r1,r2;
      long ss1,ss2,ss3,ss4,se1,se2,se3,se4;
-    Button btn1,btn2,btn3,btn4;
+    Button btn1,btn2,btn3,btn4,btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn=(Button) findViewById(R.id.btn);
         btn1=(Button)findViewById(R.id.btn1);
         btn2=(Button)findViewById(R.id.btn2);
         btn3=(Button)findViewById(R.id.btn3);
@@ -65,9 +67,16 @@ public class MainActivity extends AppCompatActivity {
         dd2=new databasehelper2(this);
         dd3=new databasehelper3(this);
         dd4=new databasehelper4(this);
-       //boolean x= pingUrl("https://jsonplaceholder.typicode.com/comments");
-        new UpdateTask().execute();
-       // text();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                new UpdateTask().execute();
+            }
+        }, 5000);
+
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +106,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Thread t=new Thread(){
+            @Override
+            public void run() {
+                try{
+                    while (!isInterrupted()){
+                        Thread.sleep(1000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long time=System.currentTimeMillis();
+                                btn.setText(time+"");
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        t.start();
     }
     private class UpdateTask extends AsyncTask<String, String,String> {
         protected String doInBackground(String... urls) {
@@ -137,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             final URL url = new URL(uri);
             final HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
-            urlConn.setConnectTimeout(1000 * 10); // mTimeout is in seconds
+            urlConn.setConnectTimeout(1000 * 10);
             final long startTime = System.currentTimeMillis();
             urlConn.connect();
             final long endTime = System.currentTimeMillis();
@@ -208,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
                                String ii2=heroObject.optString("email");
                                String ii3=heroObject.optString("name");
                                String ii4=heroObject.optString("body");
-                               // Toast.makeText(MainActivity.this,ii,Toast.LENGTH_LONG).show();
+
                                ADDDATA(ii,ii1,ii2,ii3,ii4);}
                                else if(c==2)
                                {
@@ -217,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
                                    String ii2=heroObject.optString("title");
                                    String ii3=heroObject.optString("url");
                                    String ii4=heroObject.optString("thumbnailUrl");
-                                   // Toast.makeText(MainActivity.this,ii,Toast.LENGTH_LONG).show();
+
                                    ADDDATA2(ii,ii1,ii2,ii3,ii4);
                                }
                                else if(c==3)
@@ -227,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
                                    String ii2=heroObject.optString("title");
                                    String ii3=heroObject.optString("completed");
 
-                                   // Toast.makeText(MainActivity.this,ii,Toast.LENGTH_LONG).show();
+
                                    ADDDATA3(ii,ii1,ii2,ii3);
                                }
                                else if(c==4)
@@ -238,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                                    String ii2=heroObject.optString("title");
                                    String ii3=heroObject.optString("body");
 
-                                   // Toast.makeText(MainActivity.this,ii,Toast.LENGTH_LONG).show();
+
                                    ADDDATA4(ii,ii1,ii2,ii3);
                                }
 
@@ -257,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        //displaying the error in toast if occurrs
+
                         Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -272,19 +301,22 @@ public class MainActivity extends AppCompatActivity {
     {
 
         dd1.addData(ii,ii1,ii2,ii3,ii4);
-        text();
+        if(k!=0){
+        text();}
     }
     public void ADDDATA2(String ii,String ii1,String ii2,String ii3,String ii4)
     {
 
         dd2.addData(ii,ii1,ii2,ii3,ii4);
-        text();
+        if(k!=0){
+            text();}
     }
     public void ADDDATA3(String ii,String ii1,String ii2,String ii3)
     {
 
         dd3.addData(ii,ii1,ii2,ii3);
-        text();
+        if(k!=0){
+            text();}
     }
     public void ADDDATA4(String ii,String ii1,String ii2,String ii3)
     {

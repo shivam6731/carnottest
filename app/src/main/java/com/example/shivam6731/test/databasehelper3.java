@@ -46,14 +46,7 @@ public class databasehelper3 extends SQLiteOpenHelper {
         contentValues.put(col4,completed);
 
         long result=db.insert(TABLE_NAME,null,contentValues);
-        if(result==-1)
-        {
-            System.out.println("no");
-        }
-        else
-        {
-            System.out.println("inserted "  );
-        }
+
     }
 }
 

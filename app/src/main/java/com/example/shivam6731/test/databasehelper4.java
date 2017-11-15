@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class databasehelper4 extends SQLiteOpenHelper {
-    private static final String TAG="db";
+
     private static final String TABLE_NAME="db4";
     private static final String col1="userId";
     private static final String col2="id";
@@ -46,14 +46,7 @@ public class databasehelper4 extends SQLiteOpenHelper {
         contentValues.put(col4,body);
 
         long result=db.insert(TABLE_NAME,null,contentValues);
-        if(result==-1)
-        {
-            System.out.println("no");
-        }
-        else
-        {
-            System.out.println("inserted "  );
-        }
+
     }
 }
 
