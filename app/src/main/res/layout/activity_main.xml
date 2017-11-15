@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
+    android:background="#fff"
     tools:context="com.example.shivam6731.test.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +20,7 @@
             android:gravity="center"
             android:text="Test App"
             android:textSize="25dp"
+            android:textColor="#0d5cab"
             android:textStyle="bold"/>
 
 
@@ -56,6 +58,7 @@
                         android:layout_width="match_parent"
                         android:text="Start:"
                         android:gravity="center"
+                        android:textStyle="bold"
                         android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
@@ -75,6 +78,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:text="End:"
+                        android:textStyle="bold"
                         android:gravity="center"
                         android:layout_weight="1.75"
                         android:layout_height="match_parent" />
@@ -97,6 +101,7 @@ android:textSize="13dp"
                         android:layout_width="match_parent"
                         android:text="Start Save:"
                         android:gravity="center"
+                        android:textStyle="bold"
                         android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
@@ -118,6 +123,7 @@ android:textSize="13dp"
                         android:text="End Save:"
                         android:gravity="center"
                         android:layout_weight="1.75"
+                        android:textStyle="bold"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_weight="1.25"
@@ -129,7 +135,7 @@ android:textSize="13dp"
                 </LinearLayout>
             </LinearLayout>
             <View
-                android:layout_marginTop="10dp"
+
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
                 android:background="#123"/>
@@ -155,6 +161,7 @@ android:textSize="13dp"
                             android:layout_width="match_parent"
                             android:text="Start:"
                             android:gravity="center"
+                            android:textStyle="bold"
                             android:layout_weight="1.75"
                             android:layout_height="match_parent" />
                         <TextView
@@ -176,6 +183,7 @@ android:textSize="13dp"
                             android:text="End:"
                             android:gravity="center"
                             android:layout_weight="1.75"
+                            android:textStyle="bold"
                             android:layout_height="match_parent" />
                         <TextView
                             android:layout_weight="1.25"
@@ -196,6 +204,7 @@ android:textSize="13dp"
                             android:text="Start Save:"
                             android:gravity="center"
                             android:layout_weight="1.75"
+                            android:textStyle="bold"
                             android:layout_height="match_parent" />
                         <TextView
                             android:layout_weight="1.25"
@@ -216,6 +225,7 @@ android:textSize="13dp"
                             android:text="End Save:"
                             android:gravity="center"
                             android:layout_weight="1.75"
+                            android:textStyle="bold"
                             android:layout_height="match_parent" />
                         <TextView
                             android:layout_weight="1.25"
@@ -263,6 +273,7 @@ android:textSize="13dp"
                     android:layout_width="match_parent"
                     android:text="Start:"
                     android:gravity="center"
+                    android:textStyle="bold"
                     android:layout_weight="1.75"
                     android:layout_height="match_parent" />
                 <TextView
@@ -284,6 +295,7 @@ android:textSize="13dp"
                     android:text="End:"
                     android:gravity="center"
                     android:layout_weight="1.75"
+                    android:textStyle="bold"
                     android:layout_height="match_parent" />
                 <TextView
                     android:layout_weight="1.25"
@@ -304,6 +316,7 @@ android:textSize="13dp"
                     android:text="Start Save:"
                     android:gravity="center"
                     android:layout_weight="1.75"
+                    android:textStyle="bold"
                     android:layout_height="match_parent" />
                 <TextView
                     android:layout_weight="1.25"
@@ -324,6 +337,7 @@ android:textSize="13dp"
                     android:text="End Save:"
                     android:gravity="center"
                     android:layout_weight="1.75"
+                    android:textStyle="bold"
                     android:layout_height="match_parent" />
                 <TextView
                     android:layout_weight="1.25"
@@ -335,7 +349,7 @@ android:textSize="13dp"
             </LinearLayout>
         </LinearLayout>
         <View
-            android:layout_marginTop="10dp"
+
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:background="#123"/>
@@ -361,6 +375,7 @@ android:textSize="13dp"
                         android:layout_width="match_parent"
                         android:text="Start:"
                         android:gravity="center"
+                        android:textStyle="bold"
                         android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
@@ -382,6 +397,7 @@ android:textSize="13dp"
                         android:text="End:"
                         android:gravity="center"
                         android:layout_weight="1.75"
+                        android:textStyle="bold"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_weight="1.25"
@@ -402,6 +418,7 @@ android:textSize="13dp"
                         android:text="Start Save:"
                         android:gravity="center"
                         android:layout_weight="1.75"
+                        android:textStyle="bold"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_weight="1.25"
@@ -422,6 +439,7 @@ android:textSize="13dp"
                         android:text="End Save:"
                         android:gravity="center"
                         android:layout_weight="1.75"
+                        android:textStyle="bold"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_weight="1.25"
@@ -459,6 +477,7 @@ android:textSize="13dp"
                 android:layout_margin="10dp"
                 android:text="Button1"
                 android:id="@+id/btn1"
+                android:background="#c7d9ea"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
             <Button
@@ -466,6 +485,7 @@ android:textSize="13dp"
                 android:layout_margin="10dp"
                 android:id="@+id/btn2"
                 android:text="Button2"
+                android:background="#c7d9ea"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
         </LinearLayout>
@@ -488,6 +508,7 @@ android:textSize="13dp"
                     android:layout_height="match_parent"
                     android:text="Button 3"
                     android:id="@+id/btn3"
+                    android:background="#c7d9ea"
                     android:layout_weight="1"/>
                 <Button
                     android:layout_width="match_parent"
@@ -495,6 +516,7 @@ android:textSize="13dp"
                     android:id="@+id/btn4"
                     android:layout_height="match_parent"
                     android:text="Button 4"
+                    android:background="#c7d9ea"
                     android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
@@ -503,11 +525,13 @@ android:textSize="13dp"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent">
-            <Button
+            <TextView
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
-
+                android:textColor="#d4280a"
                 android:id="@+id/btn"
+                android:gravity="center"
+                android:textSize="20dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>

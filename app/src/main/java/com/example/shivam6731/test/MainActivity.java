@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
     TextView a1,a2,a3,a4,b1,b2,b3,b4,c1,c2,c3,c4,d1,d2,d3,d4;
     String q1,q2,w1,w2,e1,e2,r1,r2;
      long ss1,ss2,ss3,ss4,se1,se2,se3,se4;
-    Button btn1,btn2,btn3,btn4,btn;
+    Button btn1,btn2,btn3,btn4;
+    TextView btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn=(Button) findViewById(R.id.btn);
+        btn=(TextView) findViewById(R.id.btn);
         btn1=(Button)findViewById(R.id.btn1);
         btn2=(Button)findViewById(R.id.btn2);
         btn3=(Button)findViewById(R.id.btn3);
