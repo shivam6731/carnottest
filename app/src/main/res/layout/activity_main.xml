@@ -50,68 +50,81 @@
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="Start:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
+                        android:id="@+id/a1"
                         android:layout_width="match_parent"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="End:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/a2"
+android:textSize="13dp"
+                        android:gravity="center"
+
                         android:layout_height="match_parent" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="Start Save:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/a3"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="End Save:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/a4"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
             </LinearLayout>
@@ -136,68 +149,80 @@
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
                         android:layout_weight="1"
-                        android:weightSum="2"
+                        android:weightSum="3"
                         android:layout_height="match_parent">
                         <TextView
                             android:layout_width="match_parent"
                             android:text="Start:"
                             android:gravity="center"
-                            android:layout_weight="1"
+                            android:layout_weight="1.75"
                             android:layout_height="match_parent" />
                         <TextView
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:layout_width="match_parent"
+                            android:id="@+id/b1"
+                            android:textSize="13dp"
+                            android:gravity="center"
                             android:layout_height="match_parent" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
                         android:layout_weight="1"
-                        android:weightSum="2"
+                        android:weightSum="3"
                         android:layout_height="match_parent">
                         <TextView
                             android:layout_width="match_parent"
                             android:text="End:"
                             android:gravity="center"
-                            android:layout_weight="1"
+                            android:layout_weight="1.75"
                             android:layout_height="match_parent" />
                         <TextView
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:layout_width="match_parent"
+                            android:id="@+id/b2"
+                            android:textSize="13dp"
+                            android:gravity="center"
                             android:layout_height="match_parent" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
                         android:layout_weight="1"
-                        android:weightSum="2"
+                        android:weightSum="3"
                         android:layout_height="match_parent">
                         <TextView
                             android:layout_width="match_parent"
                             android:text="Start Save:"
                             android:gravity="center"
-                            android:layout_weight="1"
+                            android:layout_weight="1.75"
                             android:layout_height="match_parent" />
                         <TextView
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:layout_width="match_parent"
+                            android:id="@+id/b3"
+                            android:textSize="13dp"
+                            android:gravity="center"
                             android:layout_height="match_parent" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
                         android:layout_weight="1"
-                        android:weightSum="2"
+                        android:weightSum="3"
                         android:layout_height="match_parent">
                         <TextView
                             android:layout_width="match_parent"
                             android:text="End Save:"
                             android:gravity="center"
-                            android:layout_weight="1"
+                            android:layout_weight="1.75"
                             android:layout_height="match_parent" />
                         <TextView
-                            android:layout_weight="1"
+                            android:layout_weight="1.25"
                             android:layout_width="match_parent"
+                            android:id="@+id/b4"
+                            android:gravity="center"
+                            android:textSize="13dp"
                             android:layout_height="match_parent" />
                     </LinearLayout>
                 </LinearLayout>
@@ -232,68 +257,80 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1"
-                android:weightSum="2"
+                android:weightSum="3"
                 android:layout_height="match_parent">
                 <TextView
                     android:layout_width="match_parent"
                     android:text="Start:"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="1.75"
                     android:layout_height="match_parent" />
                 <TextView
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:layout_width="match_parent"
+                    android:id="@+id/c1"
+                    android:textSize="13dp"
+                    android:gravity="center"
                     android:layout_height="match_parent" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1"
-                android:weightSum="2"
+                android:weightSum="3"
                 android:layout_height="match_parent">
                 <TextView
                     android:layout_width="match_parent"
                     android:text="End:"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="1.75"
                     android:layout_height="match_parent" />
                 <TextView
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:layout_width="match_parent"
+                    android:id="@+id/c2"
+                    android:textSize="13dp"
+                    android:gravity="center"
                     android:layout_height="match_parent" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1"
-                android:weightSum="2"
+                android:weightSum="3"
                 android:layout_height="match_parent">
                 <TextView
                     android:layout_width="match_parent"
                     android:text="Start Save:"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="1.75"
                     android:layout_height="match_parent" />
                 <TextView
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:layout_width="match_parent"
+                    android:id="@+id/c3"
+                    android:textSize="13dp"
+                    android:gravity="center"
                     android:layout_height="match_parent" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1"
-                android:weightSum="2"
+                android:weightSum="3"
                 android:layout_height="match_parent">
                 <TextView
                     android:layout_width="match_parent"
                     android:text="End Save:"
                     android:gravity="center"
-                    android:layout_weight="1"
+                    android:layout_weight="1.75"
                     android:layout_height="match_parent" />
                 <TextView
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:layout_width="match_parent"
+                    android:id="@+id/c4"
+                    android:textSize="13dp"
+                    android:gravity="center"
                     android:layout_height="match_parent" />
             </LinearLayout>
         </LinearLayout>
@@ -318,68 +355,80 @@
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="Start:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/d1"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="End:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/d2"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="Start Save:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/d3"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="1"
-                    android:weightSum="2"
+                    android:weightSum="3"
                     android:layout_height="match_parent">
                     <TextView
                         android:layout_width="match_parent"
                         android:text="End Save:"
                         android:gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.75"
                         android:layout_height="match_parent" />
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="1.25"
                         android:layout_width="match_parent"
+                        android:id="@+id/d4"
+                        android:textSize="13dp"
+                        android:gravity="center"
                         android:layout_height="match_parent" />
                 </LinearLayout>
             </LinearLayout>
@@ -409,11 +458,13 @@
                 android:layout_width="match_parent"
                 android:layout_margin="10dp"
                 android:text="Button1"
+                android:id="@+id/btn1"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_margin="10dp"
+                android:id="@+id/btn2"
                 android:text="Button2"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
@@ -436,10 +487,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Button 3"
+                    android:id="@+id/btn3"
                     android:layout_weight="1"/>
                 <Button
                     android:layout_width="match_parent"
                     android:layout_margin="10dp"
+                    android:id="@+id/btn4"
                     android:layout_height="match_parent"
                     android:text="Button 4"
                     android:layout_weight="1"/>
