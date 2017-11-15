@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
     String q1,q2,w1,w2,e1,e2,r1,r2;
      long ss1,ss2,ss3,ss4,se1,se2,se3,se4;
     Button btn1,btn2,btn3,btn4;
-    TextView btn;
+    TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn=(TextView) findViewById(R.id.btn);
+        txt=(TextView) findViewById(R.id.txt);
         btn1=(Button)findViewById(R.id.btn1);
         btn2=(Button)findViewById(R.id.btn2);
         btn3=(Button)findViewById(R.id.btn3);
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         dd2=new databasehelper2(this);
         dd3=new databasehelper3(this);
         dd4=new databasehelper4(this);
+        //handler used to delay it by 5 seconds
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -82,6 +83,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 k=1;
+                a1.setText("");
+                a2.setText("");
+                a3.setText("");
+                a4.setText("");
                 new UpdateTask().execute();
             }
         });
@@ -89,6 +94,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 k=2;
+                b1.setText("");
+                b2.setText("");
+                b3.setText("");
+                b4.setText("");
+
+
                 new UpdateTask().execute();
             }
         });
@@ -96,6 +107,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 k=3;
+                c1.setText("");
+                c2.setText("");
+                c3.setText("");
+                c4.setText("");
+
+
+
                 new UpdateTask().execute();
             }
         });
@@ -103,10 +121,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 k=4;
+                d1.setText("");
+                d2.setText("");
+                d3.setText("");
+                d4.setText("");
                 new UpdateTask().execute();
             }
         });
-
+        //new thread is made to execute the unix time stamp which is updated every second
         Thread t=new Thread(){
             @Override
             public void run() {
@@ -117,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 long time=System.currentTimeMillis();
-                                btn.setText(time+"");
+                                txt.setText(time+"");
                             }
                         });
                     }
@@ -128,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
         };
         t.start();
     }
+    //updateTask method is made to call the urls
     private class UpdateTask extends AsyncTask<String, String,String> {
         protected String doInBackground(String... urls) {
 
@@ -162,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    //ping method id used to ping the desired url
     void ping(String uri,int c)
     {
         try {
@@ -215,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+    //getdata method is used to retrieve all the data from the url and save it using volley
     void getdata(String uri, final int c)
     {
         final StringRequest stringRequest=new StringRequest(Request.Method.GET, uri,
@@ -230,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
                             JSONArray heroArray = new JSONArray(response);
 
 
-                           for (int i = 0; i < 2; i++) {
+                           for (int i = 0; i < heroArray.length(); i++) {
                                 JSONObject heroObject = (JSONObject)heroArray.get(i);
                                if(c==1){
                                String ii=heroObject.optString("PostId");
@@ -298,33 +322,34 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void ADDDATA(String ii,String ii1,String ii2,String ii3,String ii4)
+    public void ADDDATA(String postid,String id,String email,String name,String body)
     {
 
-        dd1.addData(ii,ii1,ii2,ii3,ii4);
+        dd1.addData(postid,id,email,name,body);
         if(k!=0){
         text();}
     }
-    public void ADDDATA2(String ii,String ii1,String ii2,String ii3,String ii4)
+    public void ADDDATA2(String albumid,String id,String title,String url,String thumbnailurl)
     {
 
-        dd2.addData(ii,ii1,ii2,ii3,ii4);
+        dd2.addData(albumid,id,title,url,thumbnailurl);
         if(k!=0){
             text();}
     }
-    public void ADDDATA3(String ii,String ii1,String ii2,String ii3)
+    public void ADDDATA3(String userid,String id,String title,String completed)
     {
 
-        dd3.addData(ii,ii1,ii2,ii3);
+        dd3.addData(userid,id,title,completed);
         if(k!=0){
             text();}
     }
-    public void ADDDATA4(String ii,String ii1,String ii2,String ii3)
+    public void ADDDATA4(String userid,String id,String title,String body)
     {
 
-        dd4.addData(ii,ii1,ii2,ii3);
+        dd4.addData(userid,id,title,body);
         text();
     }
+    //text method is used to set the data at text view like start end savestart saveend
     void text()
     {
 

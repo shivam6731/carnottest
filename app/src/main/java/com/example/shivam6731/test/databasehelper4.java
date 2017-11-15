@@ -36,6 +36,7 @@ public class databasehelper4 extends SQLiteOpenHelper {
 
 
     }
+    //addData id used to add data in rows and column
     public void addData(String userId ,String id,String title,String body)
     {
         SQLiteDatabase db=this.getWritableDatabase();
